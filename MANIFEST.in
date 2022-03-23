@@ -1,0 +1,2 @@
+include versioneer.py
+include cnneuro_ds_generator/_version.py
