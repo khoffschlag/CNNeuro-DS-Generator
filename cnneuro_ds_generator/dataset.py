@@ -5,7 +5,7 @@ import os
 import shutil
 import nibabel as nib
 import pandas as pd
-
+import cnneuro_ds_generator
 
 def get_ixi_id(ixi_file):
     """ Takes path to ixi subject and returns a string containing the ixi id """
@@ -85,3 +85,8 @@ def generate_dataset(input_dir, output_dir, amount_healthy_subs, amount_ill_subs
         __save_sub(mri_file=healthy_sub, subject_id=get_ixi_id(healthy_sub), output_dir=output_dir, ill=False)
 
     __generate_tumor_demographic(output_dir=output_dir, ill_subs=ill_subs, healthy_subs=healthy_subs)
+    version_file = os.path.join(output_dir, 'version.txt')
+    version = cnneuro_ds_generator.__version__
+    with open(version_file, 'w') as file:
+        file.write('This dataset was created with version %s of the CNNeuro-DS-Generator.' % version)
+
