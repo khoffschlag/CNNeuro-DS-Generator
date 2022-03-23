@@ -1,5 +1,5 @@
-from generator.utils.mri import Volume, gaussian_blur
-from generator.utils.mask import roi_mask, concat, rand_loc_subset
+from cnneuro_ds_generator.utils.mri import Volume, gaussian_blur
+from cnneuro_ds_generator.utils.mask import roi_mask, concat, rand_loc_subset
 import numpy as np
 
 

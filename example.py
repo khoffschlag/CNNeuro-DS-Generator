@@ -1,5 +1,5 @@
-from generator.dataset import generate_dataset
-from generator.utils.transform import atrophy
+from cnneuro_ds_generator.dataset import generate_dataset
+from cnneuro_ds_generator.utils.transform import atrophy
 
 INPUT_DIR = 'data_in/IXI-GM'  # make sure that this path leads to a suitable source dataset
 ATLAS_FILE = 'data_in/atlas/AAL3v1_1mm.nii.gz'  # make sure that this path leads to a suitable brain atlas

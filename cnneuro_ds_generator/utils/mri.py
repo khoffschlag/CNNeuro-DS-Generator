@@ -27,7 +27,7 @@ def rand_pos_shift(pos, min_offset, max_offset, seed):
     :param tuple pos: tuple of length 3 that contains the position that should get shifted
     :param tuple min_offset: tuple of length 3 that contain the amount that the point AT LEAST should be shifted
     :param tuple max_offset: tuple of length 3 that contain the amount that the point AT MOST should be shifted
-    :param int seed: seed for random-number-generator
+    :param int seed: seed for random-number-cnneuro_ds_generator
     :return: shifted point
     """
     for param in [pos, min_offset, max_offset]:

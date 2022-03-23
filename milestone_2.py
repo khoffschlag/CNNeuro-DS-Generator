@@ -1,5 +1,5 @@
-from generator.dataset import generate_dataset
-from generator.utils.transform import atrophy
+from cnneuro_ds_generator.dataset import generate_dataset
+from cnneuro_ds_generator.utils.transform import atrophy
 import os
 
 INPUT_DIR = 'data_in/IXI-GM'

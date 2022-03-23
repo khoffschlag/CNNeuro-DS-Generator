@@ -1,4 +1,4 @@
-from generator.utils.mri import Volume
+from cnneuro_ds_generator.utils.mri import Volume
 import numpy as np
 
 
