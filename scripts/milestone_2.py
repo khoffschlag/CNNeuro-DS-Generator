@@ -2,9 +2,9 @@ from cnneuro_ds_generator.dataset import generate_dataset
 from cnneuro_ds_generator.utils.transform import atrophy
 import os
 
-INPUT_DIR = 'data_in/IXI-GM'
-ATLAS_FILE = 'data_in/atlas/AAL3v1_1mm.nii.gz'
-OUTPUT_DIR = 'data_out/'
+INPUT_DIR = '../data_in/IXI-GM'
+ATLAS_FILE = '../data_in/atlas/AAL3v1_1mm.nii.gz'
+OUTPUT_DIR = '../data_out/'
 
 AMOUNT_HEALTHY = 280
 AMOUNT_ILL = 280
