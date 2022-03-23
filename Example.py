@@ -1,20 +1,16 @@
 from generator.dataset import generate_dataset
 from generator.utils.transform import atrophy
 
-INPUT_DIR = 'data_in/IXI-GM'
-ATLAS_FILE = 'data_in/atlas/AAL3v1_1mm.nii.gz'
-OUTPUT_DIR = 'data_out/Example_Output'
+INPUT_DIR = 'data_in/IXI-GM'  # make sure that this path leads to a suitable source dataset
+ATLAS_FILE = 'data_in/atlas/AAL3v1_1mm.nii.gz'  # make sure that this path leads to a suitable brain atlas
+OUTPUT_DIR = 'data_out/Example_Output'  # path to the folder where the generated files will take place
 
 AMOUNT_HEALTHY = 50
 AMOUNT_ILL = 50
 SEED = 42
 
-ROI = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 19, 20]  # the frontal lobe
-
-# Our IXI-GM-Dataset was smoothed with 8mm FWHM with SPM
-# FWHM =  2.35482004503 * sigma
-# 8 = 2.35482004503 * sigma -> sigma = 3.397287201153446
-# I will use a sigma of 3.4 for smoothing
+# Specify the brain regions (referenced according to the respective atlas) in which the changes are to be made:
+ROI = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 19, 20]
 
 TRANSFORMER = atrophy
 TRANSFORMER_SETTINGS = {
