@@ -66,6 +66,7 @@ def generate_dataset(input_dir, output_dir, amount_healthy_subs, amount_ill_subs
     if not os.path.exists(input_dir):
         raise Exception('The specified input_dir %s does not exist!' % input_dir)
     output_dir = os.path.abspath(output_dir)
+    os.makedirs(output_dir)
 
     ill_subs, healthy_subs = __gather_subs(input_dir=input_dir, amount_ill_patients=amount_ill_subs,
                                            amount_healthy_patients=amount_healthy_subs, shuffle=shuffle_subjects,
