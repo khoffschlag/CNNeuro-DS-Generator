@@ -63,6 +63,8 @@ def __generate_tumor_demographic(output_dir, ill_subs, healthy_subs):
 def generate_dataset(input_dir, output_dir, amount_healthy_subs, amount_ill_subs, transformer, transformer_settings,
                      seed, shuffle_subjects=False):
     input_dir = os.path.abspath(input_dir)
+    if not os.path.exists(input_dir):
+        raise Exception('The specified input_dir %s does not exist!' % input_dir)
     output_dir = os.path.abspath(output_dir)
 
     ill_subs, healthy_subs = __gather_subs(input_dir=input_dir, amount_ill_patients=amount_ill_subs,
