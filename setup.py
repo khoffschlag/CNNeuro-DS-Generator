@@ -14,6 +14,5 @@ setup(
     description='Dataset generator for the CNNeuro project',
     long_description=long_description,
     packages=find_packages(include=['cnneuro-ds-generator', 'cnneuro-ds-generator.*']),
-    install_requires=requires,
-    python_requires='>=3.9'
+    install_requires=requires
 )
